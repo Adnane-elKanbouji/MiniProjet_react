@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename='/MiniProjet_react'>
   <Provider store={Store}>
     <App />
     </Provider>
