@@ -1,0 +1,20 @@
+const Equipe=[
+    "CÔTE D'IVOIRE",
+    "GUINÉE-BISSAU",
+    "Egypte",
+    "Mozambique",
+    "ALGÉRIE",
+    "ANGOLA",
+    "Maroc",
+    "Tanzanie",
+    "Nigeria",
+    "GHANA",
+    "Sénégal",
+    "Cameroun",
+    "TUNISIE",
+    "MALI",
+    "RD Congo",
+    "Guinée",
+    "Afrique du Sud",
+    "Zambie"
+];export default Equipe

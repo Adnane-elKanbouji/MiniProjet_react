@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+// // App.js
+import "./App.css"
 
-function App() {
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import React from 'react';
+import Navabar from "./Compenents/Navbar/Navabar";
+import { Route,Routes } from 'react-router-dom';
+import Home from "./Pages/Home/Home";
+import Footer from "./Pages/Footer/Footer";
+import Login from "./login/Login";
+import Panier from "./Pages/Panier/Panier";
+import Inscription from "./login/Inscription";
+import Confirmation from "./Pages/Ticket/Confirmation"
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div className="App">
+   <Navabar/>
+   <Routes>
+
+
+    
+          
+<Route path="/"   element={<Home/>} />
+<Route path="/Login"   element={<Login/>} />
+<Route path="/signup"   element={<Inscription />} />
+<Route path="/panier"   element={<Panier />} />
+<Route path="/Confirmation"   element={<Confirmation />} />
+<Route path="/pay"   element={<><h1> Paiement </h1></>} />
+<Route path="/panier/*"   element={<><h1>panier 404</h1></>} />
+<Route path="*"   element={<><h1> 404</h1></>} />
+
+</Routes>
+          <Footer/>
     </div>
   );
-}
+};
 
 export default App;
