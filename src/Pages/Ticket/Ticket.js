@@ -96,8 +96,8 @@ const ChanegeStade=(name)=>{
    {resultatfiltres.slice(0, visibleItems).map((item)=>{
      return(
        <div style={{border:"5px solid #004930 ",width:"48%",borderStyle:" none  solid  solid   none ",padding:"0%",margin:"0.9%"}}>
-         {/* <img src={process.env.PUBLIC_URL+`Image/Match/${item.image}`} width={"100%"}  alt="" /> */}
-          <img src={process.env.PUBLIC_URL+`Image/Match/${item.image}`} width={"100%"} alt="" />
+       
+          <img src={process.env.PUBLIC_URL+`/Image/Match/${item.image}`} width={"100%"} alt="" />
           <h3>{item.date}</h3>
          <h2 style={{borderLeft:"5px solid green",paddingLeft:"1%"}} >{item.Equipe1} VS {item.Equipe2}</h2>
          <h3>Match {item.N}</h3>

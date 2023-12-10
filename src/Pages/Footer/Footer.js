@@ -5,18 +5,18 @@ export default function Footer() {
     <div className='monFoter'>
     <div >
          <h2>SPONSOR PRINCIPAL</h2>
-         <img className='imgfooter' src={process.env.PUBLIC_URL+`Image/partner1.png`} alt="" /> 
+         <img className='imgfooter' src={process.env.PUBLIC_URL+`/Image/partner1.png`} alt="" /> 
          <h2>PARTENAIRES DE LA CAF</h2>
          <div >
-            <img className='imgfooter'  src={process.env.PUBLIC_URL+`Image/partner4.png`} alt="" />
-            <img className='imgfooter' src={process.env.PUBLIC_URL+`Image/partner3.png`} alt="" />
+            <img className='imgfooter'  src={process.env.PUBLIC_URL+`/Image/partner4.png`} alt="" />
+            <img className='imgfooter' src={process.env.PUBLIC_URL+`/Image/partner5.png`}  alt="" />
             
          </div>
          <div>
          <h2>SUPPORTEURS DE LA COMPETITION</h2>
-         <img className='imgfooter' src={process.env.PUBLIC_URL+`Image/partner5.png`} alt="" />
-         <img className='imgfooter' src={process.env.PUBLIC_URL+`Image/partner6.png`} alt="" />
-         <img className='imgfooter' src={process.env.PUBLIC_URL+`Image/partner7.png`} alt="" />
+         <img className='imgfooter' src={process.env.PUBLIC_URL+`/Image/partner5.png`}  alt="" />
+         <img className='imgfooter' src={process.env.PUBLIC_URL+`/Image/partner6.png`}   alt="" />
+         <img className='imgfooter' src={process.env.PUBLIC_URL+`/Image/partner7.png`}  alt="" />
          </div>
     </div>
     <div className='nav_footer' >
