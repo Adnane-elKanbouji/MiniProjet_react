@@ -27,7 +27,7 @@ export default function Panier() {
   }
   const ok=()=>{
       if(Cart.length>0){
-        document.getElementById("ok").innerHTML=" <button type=`button`>valider l'achat</button>"
+        document.getElementById("ok").innerHTML=` <button type="button"  class="Mbtn" >valider l'achat</button>`
       }
   }
   useEffect(() => {
@@ -36,29 +36,37 @@ export default function Panier() {
     }
   }, [Cart.length]);
   return (
-    <div>
-      <h1>RÉCAPITULATIF DE VOTRE ACHAT</h1>
-      <div>Vous avez  {Cart.length} produit dans votre panier
+    <center>
+     <div className='col-10  col-xl-6'>
+     
+      <h2>RÉCAPITULATIF DE VOTRE ACHAT</h2> 
+      <div>Vous avez <span style={{fontWeight:"bold"}}>{Cart.length} </span>  produit dans votre panier  <br /><br />
       
         {Cart.map((Item)=>{
           return (
             <div>
-               ÉVÉNEMENT:{Item.Equipe1} vs {Item.Equipe2}
-               Catégorie : {Item.Categorie} <br /> Zone : {Item.place} <br /> Siège : AA-2 Quantité :{Item.quantity} <br />
+              <fieldset class="border p-3">
+                <span style={{fontSize:"1.3em"}}>
+               ÉVÉNEMENT :  {Item.Equipe1} vs {Item.Equipe2} <br />
+               Catégorie :  {Item.Categorie} <br /> Zone : {Item.place} <br /> Siège : AA-2  Quantité :{Item.quantity} <br />
                Plein tarif : {Item.tarif} $US <br />
+               </span>
+               </fieldset>
                ------------------------------------------------------------------------------------  <br />
             </div>
           )
         })}
-      ------------------------------------------------------------------------------------  <br />
-        <h1>TOTAL QUANTITY: {Totalqte} </h1>
-        <h1>TOTAL TARIF : {Totalprice}</h1>
-        <button type="button"><Link to="/">Comnce l'achat</Link></button>
-        <div id='ok'>
+  
+        <h3>TOTAL QUANTITY: {Totalqte} </h3>
+        <h3>TOTAL TARIF : {Totalprice} $US</h3>
+        <button type="button" className='Mbtn' ><Link id='MyLink' to="/">Comamcer l'achat</Link></button>
+        <span id='ok'>
          
+        </span>
         </div>
-        </div>
+       
     </div>
+    </center>
   )
 }
 

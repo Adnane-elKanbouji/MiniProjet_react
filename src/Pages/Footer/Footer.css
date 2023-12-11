@@ -1,17 +1,20 @@
 .monFoter{
     background-image: url("../../../public/Image/footer.png");
     width: 100%;
-    height: 610px;
+    height: 110%;
     text-align: center;
     color: white;
 }
 .navbar{
+    display:flex;
+    justify-content: space-between;
     background-color:#ef8f00 ;
-     height: 40px;
+     height: 50%;
     color:#004930 ;
     
     
 }
+
 .imgfooter{
     height: auto;
     width: 15%;

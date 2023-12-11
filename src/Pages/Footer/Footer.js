@@ -3,7 +3,7 @@ import "./Footer.css"
 export default function Footer() {
   return (
     <div className='monFoter'>
-    <div >
+    <div ><br />
          <h2>SPONSOR PRINCIPAL</h2>
          <img className='imgfooter' src={process.env.PUBLIC_URL+`/Image/partner1.png`} alt="" /> 
          <h2>PARTENAIRES DE LA CAF</h2>
@@ -25,7 +25,7 @@ export default function Footer() {
             <li>Conditions générales d'utilisation</li>
             <li>Tous droits réservés</li>
             <li>FAQ</li>
-            <li>support@can2023-tickets.com</li>
+            <li>support@can2023-tickets.com</li><br />
         </ul>
     </div>
     </div>

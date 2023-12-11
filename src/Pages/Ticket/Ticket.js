@@ -36,7 +36,7 @@ export default function Ticket() {
 const ChanegeStade=(name)=>{
    SetseletecdStade(name)
    window.scrollTo({
-      top: 650,
+      top: 600,
       behavior: 'smooth', // Ajoute un effet de défilement fluide
     })
 }
@@ -60,78 +60,87 @@ const ChanegeStade=(name)=>{
     
      
        <div>
-         <div className='row' >
-           
-   <h1 style={{borderLeft:"5px solid green",paddingLeft:"1%"}} >BILLETTERIE COMPETITION</h1>
-  <ul  style={{display:'flex',justifyContent:"space-bettwen"}}>
-   <li  className='col-4' style={{listStyle:'none'}}>
-   <select style={{width:"100%"}} value={seletecdStade} onChange={(e)=>SetseletecdStade(e.target.value)} name="" id="">
+       
+         <div style={{marginTop:"-5%"}} className='row  p-3' >
+            
+         <img src={process.env.PUBLIC_URL+`/Image/header.jpg`} alt="" />
+          
+   <div className='col-12 p-3 mx-auto'>     
+   <h1 style={{borderLeft:"10px solid green",float:"left",paddingLeft:"1%"}} >BILLETTERIE COMPETITION</h1>
+   </div> 
+ 
+  <div className='col-8 col-xl-4 mx-auto '>
+
+   <select  value={seletecdStade} onChange={(e)=>SetseletecdStade(e.target.value)} name="" id="">
    <option  value="Choix de stade" selected hidden>Choix de stade</option>
        {Stade.map((item)=>{
           return <option value={item.name} >{item.name}</option>
        })}
        
    </select>
-   </li>
-   <li>
-   <select style={{width:"100%"}} value={seletecdEquipe}  onChange={(e)=>SetseletecdEquipe(e.target.value)} name="" id="">
+   
+   </div>
+   <div className='col-8 mx-auto col-xl-4   '>
+   <select  value={seletecdEquipe}  onChange={(e)=>SetseletecdEquipe(e.target.value)} name="" id="">
    <option  selected hidden>choix d'equipe</option>
        {Equipe.map((item)=>{
           return <option value={item} >{item}</option>
        })}
        
    </select>
-   </li>
-   <li>
-   <select style={{width:"100%"}} name="" id="">
+   </div>
+   <div className='col-8 col-xl-4 mx-auto '>
+   <select  name="" id="">
    <option value="" disabled selected hidden>Rtap de competition</option>
        {Stade.map((item)=>{
           return <option >{item.name}</option>
        })}
        
    </select>
-   </li>
-   </ul>
- 
+  
+  </div>
+<div className='row p-2 mx-auto m-1 ' >
    {resultatfiltres.slice(0, visibleItems).map((item)=>{
      return(
-       <div style={{border:"5px solid #004930 ",width:"48%",borderStyle:" none  solid  solid   none ",padding:"0%",margin:"0.9%"}}>
+      
+       <div  className="col-10 mx-auto m-3 p-3 col-xl-5" style={{border:"4px solid #004930 ",borderStyle:" solid"}}>
        
-          <img src={process.env.PUBLIC_URL+`/Image/Match/${item.image}`} width={"100%"} alt="" />
-          <h3>{item.date}</h3>
-         <h2 style={{borderLeft:"5px solid green",paddingLeft:"1%"}} >{item.Equipe1} VS {item.Equipe2}</h2>
-         <h3>Match {item.N}</h3>
+          <img src={process.env.PUBLIC_URL+`/Image/Match/${item.image}`} width={"100%"}  alt="" />
+          <h5>{item.date}</h5>
+         <h3 style={{borderLeft:"5px solid green",paddingLeft:"1%"}} >{item.Equipe1} VS {item.Equipe2}</h3>
+         <h4>Match {item.N}</h4>
         
-         <h3> <img src={process.env.PUBLIC_URL+`/Image/place.svg`}  alt="" /> {item.Stade}</h3>
-         <button type='button' className='Mbtn' style={{float:"right"}} onClick={(ids)=>itemAddId(item.id)} ><Link to="/Confirmation">Reserver</Link></button>
+         <span> <img src={process.env.PUBLIC_URL+`/Image/place.svg`}  alt="" /> {item.Stade}</span><br />
+         <button type='button' className='Mbtn' style={{float:"right"}} onClick={(ids)=>itemAddId(item.id)} ><Link id='MyLink' to="/Confirmation">Reserver</Link></button>
          
-  
+    <br />
           
        </div>
      )
    })}
+   </div>
  {visibleItems < resultatfiltres.length && (
-        <button onClick={handleShowMore}>More</button>
+        <button className='Mbtn mx-auto col-6 col-xl-2'  onClick={handleShowMore}><span id='MyLink'>More</span></button>
       )}
    
    </div>
   
-      <div className='row'>
-<h1 style={{borderLeft:"5px solid green",paddingLeft:"1%"}} >BILLETTERIE ENTRÉE PAR STADE</h1>
+      <div className='row  p-3 '>
+<h1 className='col-12 p-3'  style={{borderLeft:"5px solid green",paddingLeft:"1%"}} >BILLETTERIE ENTRÉE PAR STADE</h1>
 {Stade.map((item,index)=>{
   return(
-    <div style={{border:"5px solid #ef8f00 ",width:"48%",borderStyle:" none  solid  solid   none ",padding:"0%",margin:"0.9%"}}>
+    <div  className="col-10 m-3 p-3 mx-auto col-xl-5" style={{border:"4px solid #ef8f00 ",borderStyle:"solid ",padding:"0%",margin:"0.9%"}}>
       <img src={process.env.PUBLIC_URL+`/Image/Stade/${item.img}`} width={"100%"}  alt="" />
-      <h2 style={{borderLeft:"5px solid green",paddingLeft:"1%"}} >{item.name}</h2>
-      <button type='button' onClick={(name)=>ChanegeStade(item.name)}  className='Mbtn' >Reseerver</button>
+      <h5 style={{borderLeft:"5px solid green",paddingLeft:"1%"}} >{item.name}</h5>
+      <button type='button' onClick={(name)=>ChanegeStade(item.name)} style={{float:"right"}}  className='Mbtn' ><span id='MyLink' >Reserve</span></button>
     </div>
   )
 })}
 </div>
-    
+
        </div>
     
-   
+     
      )
     }
     

@@ -5,8 +5,8 @@ export default function RouteLogin() {
   return (
     <div>
         <center>
-       <Link to="/Login">Deja un compte</Link>
-      <Link to="/signup">Pas de compte</Link>
+       <Link style={{fontFamily:"sans-serif",fontSize:"1.5em",color:"#ef8f00",padding:"1%"}} to="/Login">Deja un compte</Link>
+      <Link style={{fontFamily:"sans-serif",fontSize:"1.5em",color:"#ef8f00",padding:"1%"}} to="/signup">Pas de compte</Link>
       </center>
     </div>
   )

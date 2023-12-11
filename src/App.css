@@ -6,6 +6,10 @@
   height: 40vmin;
   pointer-events: none;
 }
+#MyLink{
+  text-decoration: none;
+  color: #ef8f00;
+}
 li{
   list-style: none;
 }

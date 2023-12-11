@@ -29,15 +29,18 @@ const LoginForm = ({ onLogin }) => {
   return (
     <center>
 <RouteLogin/>
+   <br />
      
-     <div class="form__group field">
+     <div class="col-10  col-xl-5">
      <form action="" onSubmit={handleSubmit}>
+      <fieldset class="border p-5">
        <h2>Autenfication</h2><br />
    <input type="input" value={email} onChange={handleEmailChange} class="form__field" placeholder="Name" name="name" id='name' required />
    
   <input type="password"  value={password}  onChange={handlePasswordChange} class="form__field" placeholder='Password' />
   <input type="submit" on class="btn"  style={{background:"#004930 ",width:"100%",padding:"3%",marginTop: "10%",color:"white"}} value="Connecter" />
   <span>Mot de passe oublié?</span>
+  </fieldset>
   </form>
  </div></center>
   );

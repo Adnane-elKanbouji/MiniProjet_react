@@ -75,15 +75,24 @@ const listeMatch=Match.filter((Itme)=>{
   const placecategorie = ListeCategorie.find((item) => item.name == Nplace );
   const NbrTicket = [1, 2, 3, 4, 5];
   return (
-    <div>
+    <div className='row p-3'>
+      <div className='col-12'>
+     
       {listeMatch.map((Item)=>{
-        return  <h1  style={{borderLeft:"5px solid green",paddingLeft:"1%"}} >{Item.Equipe1}  VS   {Item.Equipe2} </h1>
+        return  <h1  style={{borderLeft:"5px solid green",padding:"1%"}} >{Item.Equipe1}  VS   {Item.Equipe2} </h1>
       })}
       
-      <img  src={process.env.PUBLIC_URL+`/Image/stade3.jpg`} style={{float:'right'}} alt="" />
-      <ul>
+      </div>
+     <div className='col-12 col-xl-6 '>
+      <img  src={process.env.PUBLIC_URL+`/Image/stade3.jpg`} width={"100%"} alt="" />
+      </div>
+      <div className='col-12 col-xl-5 p-5 mt-2'>
+      
+      
+     
+      <ul >
       <li>
-   <select name="" id="" onChange={handleChange} value={Nplace}>
+   <select  name="" id="" onChange={handleChange} value={Nplace}>
 
    
        {ListeCategorie.map((item)=>{
@@ -115,10 +124,15 @@ const listeMatch=Match.filter((Itme)=>{
    </li>
  
    </ul>
+   <center className='p-3'>
     <h4>Quantie : {Totalqte}</h4>
-   <h4>TOTAL DU PANIER : {Totalprice}</h4>
-   <button onClick={(id)=>addTocart(Nid)} type='button'><Link to='/panier'>Confermer la commande</Link></button>
+   <h4>TOTAL DU PANIER : {Totalprice}</h4><br />
+   <button onClick={(id)=>addTocart(Nid)} className='Mbtn' type='button'><Link id='MyLink' to='/panier'>Confermer la commande</Link></button>
+   </center>
+   </div>
    
+      
     </div>
+   
   )
 }

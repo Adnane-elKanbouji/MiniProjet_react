@@ -34,10 +34,12 @@ export default function Inscription() {
     } 
 
   return (
-    <div>
+    <div >
       <center>
         <RouteLogin />
-        <div className="form__group field">
+        <br />
+        <div className='col-10  col-xl-6'>
+          <fieldset class="border p-4">
           <h2>Inscription</h2><br />
           <input type="email" className="form__field" placeholder="Email" id='Email' onChange={handleInputChange} required />
           <input type="text" className="form__field" placeholder='Prenom' id='Prenom' onChange={handleInputChange} required />
@@ -49,6 +51,7 @@ export default function Inscription() {
           <input type="checkbox" className="form-check-input" />
           <span style={{ paddingLeft: "1%" }}> vous Acceptez les conditions d'utilisation et la politique de confidentialité</span>
           <input type="button" className="btn" onClick={AddPerson} style={{ background: "#004930", width: "100%", padding: "3%", marginTop: "10%", color: "white" }} value="S'inscrire" />
+          </fieldset>
         </div>
       </center>
     </div>
