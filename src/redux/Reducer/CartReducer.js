@@ -70,20 +70,18 @@ export default function CartReducer(state=INITIAL_STATE,action) {
           }
     
         
-        // case "ADDUSER":{
-        //     const user=action.payload
-    
-            
-      
-        //    const newArrUs = [...state.Persone];
-        //     newArrUs.push(user)
-            
-        //     return {
-        //       Persone:newArrUs,
-              
-        //     };
+          case "ADDUSER": {
+            const user = action.payload;
+          
+            const newArrUs = [...state.Persone];
+            newArrUs.push(user);
+          
+            return {
+              Persone: newArrUs,
+            };
+          }
        
-        //   }
+          
 }
  return state;
 }

@@ -23,15 +23,23 @@ export default function Inscription() {
   const AddPerson = () => {
     const psword1 = document.getElementById("psword1").value;
     const psword2 = document.getElementById("psword2").value;
- console.log(per)
+   if(psword1==psword2){
+    alert("l'inscription succes !")
+   }
+   else{
+    alert("Mode pass Incorrect")
+   }
+    // Assurez-vous de définir 'per' correctement avant de l'utiliser
     
-      dispatch({
-        type: "ADDUSER",
-        payload: per
-      });
-
-      console.log(Persone); // Affichez ici si vous voulez vérifier la mise à jour après la dispatch
-    } 
+  
+    // dispatch({
+    //   type: "ADDUSER",
+    //   payload: per,
+    // });
+  
+    // Assurez-vous de définir 'Persone' correctement si vous souhaitez le logguer ici
+    console.log(Persone);
+  }
 
   return (
     <div >

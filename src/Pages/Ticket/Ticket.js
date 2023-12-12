@@ -3,6 +3,7 @@ import "./Ticket.css"
 import Match from "../../data/Match";
 import Stade from '../../data/Stade';
 import Equipe from '../../data/Equipe';
+import Etape from '../../data/Etape';
 import {Link} from 'react-router-dom';
 
 import { useSelector,useDispatch } from 'react-redux';
@@ -37,7 +38,7 @@ const ChanegeStade=(name)=>{
    SetseletecdStade(name)
    window.scrollTo({
       top: 600,
-      behavior: 'smooth', // Ajoute un effet de défilement fluide
+      behavior: 'smooth', 
     })
 }
    
@@ -91,9 +92,9 @@ const ChanegeStade=(name)=>{
    </div>
    <div className='col-8 col-xl-4 mx-auto '>
    <select  name="" id="">
-   <option value="" disabled selected hidden>Rtap de competition</option>
-       {Stade.map((item)=>{
-          return <option >{item.name}</option>
+   <option value="" disabled selected hidden>Etape de competition</option>
+       {Etape.map((item)=>{
+          return <option >{item}</option>
        })}
        
    </select>

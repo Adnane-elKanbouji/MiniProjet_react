@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 export default function Panier() {
@@ -25,11 +25,10 @@ export default function Panier() {
         payload: indexItem
     })
   }
+ 
   const ok=()=>{
-    if (Cart.length > 0) {
-        document.getElementById("ok").innerHTML=` <button type="button"  class="Mbtn" ><a style="text-decoration:none;color:#ef8f00" href='/MiniProjet_react/payment'>valider l'achat</Link></button>`
-      }else{
-        document.getElementById("ok").innerHTML=``
+    if (Cart.length == 0) {
+        document.getElementById("ok").style.display = "none"
       }
   }
   useEffect(() => {
@@ -66,9 +65,10 @@ export default function Panier() {
   
         <h3>TOTAL QUANTITY: {Totalqte} </h3>
         <h3>TOTAL TARIF : {Totalprice} $US</h3>
-        <button type="button" className='Mbtn' ><Link id='MyLink' to="/">Comamcer l'achat</Link></button>
-        <span id='ok'>
-         
+        
+        <button type="button"  className='Mbtn m-2' ><Link id='MyLink' to="/">Comamcer l'achat</Link></button>
+        <span id='ok' >
+        <button type="button"  className="Mbtn m-2" ><Link id="MyLink" to='/payment'>valider l'achat</Link></button>
         </span>
         </div>
        

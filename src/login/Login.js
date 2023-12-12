@@ -8,11 +8,12 @@ const LoginForm = ({ onLogin }) => {
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
   const Persone=useSelector(state=>state.Persone);
-  const [Profil,setprofil]=useState()
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
   console.log(Persone)
+   
     Persone.map((Item)=>{
       if (email == Item.Email && password == Item.psword) {
         // Si les identifiants sont corrects, appeler la fonction onLogin
