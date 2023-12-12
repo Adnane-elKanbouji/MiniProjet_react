@@ -13,8 +13,8 @@ const Match=[
         id:uuidv4(),
          N:"2 et 3",
         date:"14 janvier 2024 a partir de 17h00",
-         Equipe1:"Egypte",
-         Equipe2:"Mozambique",
+         Equipe1:"EGYPTE",
+         Equipe2:"MOZAMBIQUE",
           Stade:"STADE FÉLIX HOUPHOUËT-BOIGNY - ABIDJAN",
          image:"Egypte_mozambique.png"
     },
@@ -31,17 +31,17 @@ const Match=[
         id:uuidv4(),
          N:"5",
         date:"17 janvier 2024 à partir de 17h00",
-         Equipe1:"Maroc",
-         Equipe2:"Tanzanie",
+         Equipe1:"MAROC",
+         Equipe2:"TANZANIE",
           Stade:"STADE LAURENT POKOU - SAN PEDRO",
-         image:"coted'ivoire_Bissau.png"
+         image:"Moroco_tanzania.png"
     },
     { 
         id:uuidv4(),
          N:"6",
         date:"18 janvier 2024 à partir de 14h00",
          Equipe1:"CÔTE D'IVOIRE",
-         Equipe2:"Nigeria",
+         Equipe2:"NIGERIA",
           Stade:"STADE ALASSANE OUATTARA D’EBIMPE - ABIDJAN",
          image:"coted'ivoire_nigeria.png"
     },
@@ -58,8 +58,8 @@ const Match=[
         id:uuidv4(),
          N:"9",
         date:"19 janvier 2024 à partir de 17h00",
-         Equipe1:"Sénégal",
-         Equipe2:"Cameroun",
+         Equipe1:"SÉNÉGAL",
+         Equipe2:"CAMÉROUN",
           Stade:"STADE CHARLES KONAN BANNY - YAMOUSSOUKRO",
          image:"cameron_senegal.png"
     },
@@ -76,8 +76,8 @@ const Match=[
         id:uuidv4(),
          N:"12",
         date:"21 janvier 2024 à partir de 14h00",
-         Equipe1:"Maroc",
-         Equipe2:"RD Congo",
+         Equipe1:"MAROC",
+         Equipe2:"RD CONGO",
           Stade:"STADE LAURENT POKOU - SAN PEDRO",
          image:"maroc_kongo.png"
     },
@@ -85,8 +85,8 @@ const Match=[
         id:uuidv4(),
          N:"13",
         date:"23 janvier 2024 à partir de 17h00",
-         Equipe1:"Guinée",
-         Equipe2:"Sénégal",
+         Equipe1:"GUINÉE",
+         Equipe2:"SÉNÉGAL",
           Stade:"STADE CHARLES KONAN BANNY - YAMOUSSOUKRO",
          image:"senegal_guine.png"
     },
@@ -94,8 +94,8 @@ const Match=[
         id:uuidv4(),
          N:"14",
         date:"24 janvier 2024 à partir de 17h00",
-         Equipe1:"Afrique du Sud",
-         Equipe2:"Tunisie ",
+         Equipe1:"AFRIQUE DU SUD",
+         Equipe2:"TUNISIE ",
           Stade:"STADE AMADOU GON COULIBALY - KORHOGO",
          image:"tunisie_afriquesud.png"
     },
@@ -103,8 +103,8 @@ const Match=[
         id:uuidv4(),
          N:"15",
         date:"24 janvier 2024 à partir de 20h00",
-         Equipe1:"Zambie",
-         Equipe2:"Maroc",
+         Equipe1:"ZAMBIE",
+         Equipe2:"MAROC",
           Stade:"STADE LAURENT POKOU - SAN PEDRO",
          image:"maroc_zambia.png"
     }

@@ -27,7 +27,7 @@ export default function Inscription() {
     
       dispatch({
         type: "ADDUSER",
-        payload: per,
+        payload: per
       });
 
       console.log(Persone); // Affichez ici si vous voulez vérifier la mise à jour après la dispatch

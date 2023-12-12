@@ -9,9 +9,10 @@ const INITIAL_STATE={
             Email: "Adnane@gmail.com",
             Nom: "EL KANBOUJI",
             Prenom: "ADNANE",
-            psword: "123"
+            psword: "123",
         }
     ],
+    
 };
 
 export default function CartReducer(state=INITIAL_STATE,action) {
@@ -46,25 +47,43 @@ export default function CartReducer(state=INITIAL_STATE,action) {
             Cart:newArr,
         }
     }
+
     case "UPDATEID":
         return{...state,id:action.payload}
 
-    // case 'UPDATEITEM':
-    //     const indexItemUpdate=state.Cart.findIndex(
-    //         (obj)=>obj.id===action.payload.id
-    //     );
-    //     const newArr=[...state.Cart];
-    //     newArr.splice(indexItemUpdate,1,action.payload)
-    //     return{
-    //         Cart:newArr
-    //     }
-   case "ADDUSER":
-       const newArUS=[...state.Persone];
-       newArUS.push(action.payload);
-       return{
-        Persone:newArUS,
-       }
-
+    case "UPDATELANG":
+        return {...state,Lang:action.payload}
+        
+    case "DELETEITEM":{
+            const indexItemdel = action.payload;
+    
+            
+      
+           const newArrC = [...state.Cart];
+            newArrC.splice(indexItemdel,1)
+            
+            return {
+              Cart: newArrC,
+              
+            };
+       
+          }
+    
+        
+        // case "ADDUSER":{
+        //     const user=action.payload
+    
+            
+      
+        //    const newArrUs = [...state.Persone];
+        //     newArrUs.push(user)
+            
+        //     return {
+        //       Persone:newArrUs,
+              
+        //     };
+       
+        //   }
 }
  return state;
 }

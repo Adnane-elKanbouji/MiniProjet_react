@@ -6,7 +6,7 @@ export default function Panier() {
   const dispatch=useDispatch();
   let Totalqte = 0;
   let Totalprice=0;
- 
+ console.log(Cart);
   if(Cart.length !== 0){
     for(let item of Cart){
         Totalqte +=  item.quantity;
@@ -16,9 +16,9 @@ export default function Panier() {
     
     }
 
-  const deletep = (id) => {
+  const deletep = (ids) => {
 
-    const indexItem = Cart.findIndex(obj => obj.id === id)
+    const indexItem = Cart.findIndex(obj => obj.id == ids)
 
     dispatch({
         type: "DELETEITEM",
@@ -26,15 +26,19 @@ export default function Panier() {
     })
   }
   const ok=()=>{
-      if(Cart.length>0){
-        document.getElementById("ok").innerHTML=` <button type="button"  class="Mbtn" >valider l'achat</button>`
+    if (Cart.length > 0) {
+        document.getElementById("ok").innerHTML=` <button type="button"  class="Mbtn" ><a style="text-decoration:none;color:#ef8f00" href='/MiniProjet_react/payment'>valider l'achat</Link></button>`
+      }else{
+        document.getElementById("ok").innerHTML=``
       }
   }
   useEffect(() => {
-    if (Cart.length > 0) {
+    
       ok();
-    }
+   
   }, [Cart.length]);
+
+  
   return (
     <center>
      <div className='col-10  col-xl-6'>
@@ -50,10 +54,13 @@ export default function Panier() {
                ÉVÉNEMENT :  {Item.Equipe1} vs {Item.Equipe2} <br />
                Catégorie :  {Item.Categorie} <br /> Zone : {Item.place} <br /> Siège : AA-2  Quantité :{Item.quantity} <br />
                Plein tarif : {Item.tarif} $US <br />
+               <img className='col-3 col-xl-1' onClick={e => deletep(Item.id)} src={process.env.PUBLIC_URL+`/Image/delete.svg`} alt="" />
+               
                </span>
                </fieldset>
                ------------------------------------------------------------------------------------  <br />
             </div>
+            
           )
         })}
   

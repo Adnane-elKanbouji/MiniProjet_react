@@ -9,9 +9,9 @@ import Ticket from '../Ticket/Ticket'
 export default function Home() {
   return (
     <div>
-       <br />
+       
       <img width={"100%"} src={process.env.PUBLIC_URL+`Image/header.jpg`} alt="" />
-      
+      <br /><br />
       <Ticket/>
  
 {/* <div className='row'>

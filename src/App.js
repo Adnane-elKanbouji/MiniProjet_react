@@ -10,14 +10,16 @@ import Footer from "./Pages/Footer/Footer";
 import Login from "./login/Login";
 import Panier from "./Pages/Panier/Panier";
 import Inscription from "./login/Inscription";
-import Confirmation from "./Pages/Ticket/Confirmation"
-
+import Confirmation from "./Pages/Ticket/Confirmation";
+import Payment from "./Pages/Payment/Payment";
+import LangContext from './Compenents/Lang/LangContext';
 
 const App = () => {
   return (
   <div >
-   
+   <LangContext>
    <Navabar/>
+   </LangContext>
    <br />
    <Routes>
 
@@ -29,7 +31,7 @@ const App = () => {
 <Route path="/signup"   element={<Inscription />} />
 <Route path="/panier"   element={<Panier />} />
 <Route path="/Confirmation"   element={<Confirmation />} />
-<Route path="/pay"   element={<><h1> Paiement </h1></>} />
+<Route path="/payment"   element={<Payment/>} />
 <Route path="/panier/*"   element={<><h1>panier 404</h1></>} />
 <Route path="*"   element={<><h1> 404</h1></>} />
 

@@ -12,11 +12,11 @@ const LoginForm = ({ onLogin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  console.log(Persone)
     Persone.map((Item)=>{
-      if (email === Item.Email && password === Item.psword) {
+      if (email == Item.Email && password == Item.psword) {
         // Si les identifiants sont corrects, appeler la fonction onLogin
-        setprofil(Item);
+        
         onLogin();
       } else {
         // Gérer les erreurs d'authentification
@@ -60,16 +60,20 @@ const App = () => {
   };
 
   return (
+    <center>
     <div>
       {isLoggedIn ? (
-        <div>
-          <p>Bienvenue! Mosieur Zayla Vous avez Conecte    Mohal3a </p>
-          <button onClick={handleLogout}>Déconnexion</button>
+        <div style={{fontFamily:"Poppins"}} className='col-xl-12'>
+          <h2>Bienvenue ! Mosieur <span style={{color:"#ef8f00"}}><i>Adnane</i></span> </h2>
+          <h3>Nom Complet : <span style={{color:"#ef8f00"}}><i>Adnane El kanbouji</i></span> </h3>
+          <h4>Votre Adress :  <span style={{color:"#ef8f00"}}><i>hay lbaghdadi rue hichi06 n 13</i></span> </h4><br />
+          <button className='Mbtn' onClick={handleLogout}>Déconnexion</button>
         </div>
       ) : (
         <LoginForm onLogin={handleLogin} />
       )}
     </div>
+    </center>
   );
 };
 
