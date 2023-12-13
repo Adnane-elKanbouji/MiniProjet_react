@@ -35,7 +35,7 @@ const LoginForm = ({ onLogin }) => {
      <div class="col-10  col-xl-5">
      <form action="" onSubmit={handleSubmit}>
       <fieldset class="border p-5">
-       <h2>Autenfication</h2><br />
+       <h2><i>Authentification</i></h2><br />
    <input type="input" value={email} onChange={handleEmailChange} class="form__field" placeholder="Name" name="name" id='name' required />
    
   <input type="password"  value={password}  onChange={handlePasswordChange} class="form__field" placeholder='Password' />

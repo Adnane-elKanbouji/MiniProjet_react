@@ -125,7 +125,7 @@ const listeMatch=Match.filter((Itme)=>{
  
    </ul>
    <center className='p-3'>
-    <h4>Quantie : {Totalqte}</h4>
+    <h4>Quantity : {Totalqte}</h4>
    <h4>TOTAL DU PANIER : {Totalprice}</h4><br />
    <button onClick={(id)=>addTocart(Nid)} className='Mbtn' type='button'><Link id='MyLink' to='/panier'>Confermer la commande</Link></button>
    </center>
