@@ -16,7 +16,7 @@ export default function Payment() {
            
             <h2>Payment</h2>
           </div>
-          <form action="">
+          
             <p class="fw-bold mb-4 pb-2">Saved cards:</p>
 
             <div class="d-flex flex-row align-items-center mb-4 pb-1">
@@ -76,7 +76,7 @@ export default function Payment() {
             </div>
 
             <button class="btn btn-success btn-lg btn-block">Add card</button>
-          </form>
+         
         </div>
       </div>
     </div>

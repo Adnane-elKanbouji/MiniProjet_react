@@ -70,7 +70,7 @@ const Match=[
          Equipe1:"TUNISIE",
          Equipe2:"MALI",
           Stade:"STADE AMADOU GON COULIBALY - KORHOGO",
-         image:"tunis_mali.png"
+         image:"tunis_Mali.png"
     },
     { 
         id:uuidv4(),
@@ -95,7 +95,7 @@ const Match=[
          N:"14",
         date:"24 janvier 2024 à partir de 17h00",
          Equipe1:"AFRIQUE DU SUD",
-         Equipe2:"TUNISIE ",
+         Equipe2:"TUNISIE",
           Stade:"STADE AMADOU GON COULIBALY - KORHOGO",
          image:"tunisie_afriquesud.png"
     },
